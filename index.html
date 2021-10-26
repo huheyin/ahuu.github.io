@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+        :root{
+            box-sizing: border-box;
+        }
+
+        *,
+        ::before,
+        ::after{
+            box-sizing: inherit;
+        }
+
+        body{
+            background-color: #eee;
+            margin: 0 auto;
+            /*上 右 下 左*/
+        }
+
+        h2{
+            color: #fffa;
+            padding:0;
+        }
+
+        p{
+            color: #666;
+            line-height: 2em;
+        }
+
+        .container{
+            width: 720px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 8px 2px lightgrey;
+            overflow: hidden;
+            /*box-shadow: 水平距离 垂直距离 模糊 阴影大小 颜色 方向*/
+        }
+
+        .bg{
+            width:120%;
+            overflow: hidden;
+            margin-left: -10%;
+            margin-right: -10%;
+            background-color: #08f;
+            border-radius:0 0 150% 150%;
+        }      
+
+        .grad_blue{
+            background-image: linear-gradient(to right,#08ff,#fff0);
+            width: 50%;
+            padding:0.3em;
+        }
+
+        .grad_green{
+            float:right;
+            background-image: linear-gradient(to left,#080f,#fff0);
+            width:50%;
+            /*45vw = 50vw - 5vw（内层容器外边距）=50%父元素宽度*/
+            padding:0.3em;
+            text-align: right;
+            margin: 0;
+        }
+
+        .grad_yellow{
+            float:left;
+            background-image: linear-gradient(to right,#880f,#fff0);
+            width: 50%;
+            padding:0.3em;
+            margin: 0;
+        }
+
+        .grad_orange{
+            float:right;
+            background-image: linear-gradient(to left,#f80f,#fff0);
+            width:50%;
+            padding:0.3em;
+            text-align: right;
+            margin: 0;
+        }
+
+        .grad_red{
+            float:left;
+            background-image: linear-gradient(to right,#f00f,#fff0);
+            width: 50%;
+            padding:0.3em;
+            margin: 0;
+        }
+
+        .circle{
+            display: inline-block;
+            width:45px;
+            height:45px;
+            border-radius: 50%;
+            background-color:#fffa;
+            vertical-align: middle;
+        }
+
+        .triangle{
+            width:0;
+            height:0;
+            border-top:1em solid transparent;
+            border-left:1em solid #adf;
+            border-right:1em solid transparent;
+            margin: 0 4em;
+        }
+
+        .bubble{
+            border-radius: 1em;
+            background-color: #adf;
+            margin: 0 3em;
+            padding: 1em;
+        }
+
+        .icon{
+            display: inline-block;
+            width:45px;
+            height:45px;
+            overflow: hidden;
+            background-image: url(icons.png);
+            background-repeat: no-repeat;    
+        }
+
+        .section{
+            margin: 3em 0; 
+        }
+
+        .part{
+            display: table;
+            width:100%;
+            border-spacing: 3em 0;
+        }
+
+        .side{
+            display: table-cell;
+            width: 140px;
+            /*固定宽度*/
+        }
+
+        .content{
+            display: table-cell;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="bg">
+                <h2 style="text-align: center;color: white;">个人简历</h2>
+            </div>
+            
+            <div class="section">
+                <h2 class="grad_blue"  style="margin-bottom: 0;">
+                    <div class="circle">
+                        <div  class="icon" style="background-position: -90px -45px;"></div>
+                    </div>
+                    
+                    威震天
+                </h2>
+                <p style="margin: 0 3em;">Web前端开发工程师、网页设计师</p>
+                <div class="triangle"></div>
+                <p class="bubble">
+                    我叫威震天，机器人，今年28岁，
+                    毕业于四川大学计算机科学与技术学院，
+                    主修计算机科学与技术，
+                    精通HTML5、CSS3、jQuery、JavaScript，
+                    熟悉使用各种Web开发和设计工具
+                </p>
+            </div>
+            
+            <div class="section">
+                <h2 class="grad_green">
+                    工作经验
+                    <div class="circle">
+                        <div  class="icon"  style="background-position: -45px 0px;"></div>
+                    </div>
+                </h2>
+                <div class="part">
+                    <div class="side">
+                        <p>
+                            <span style="font-size: medium;font-weight: bold;">
+                                XX科技有限公司
+                            </span><br/>
+                            <span style="font-size: smaller;">
+                                Web前端开发工程师<br/>2013.09 - 2015.06
+                            </span>        
+                        </p>
+                    </div>
+                    <div class="content">
+                        <p>
+                            利用(X)HTML/CSS/JavaScript/Flash
+                            等各种Web技术进行客户端产品的开发。
+                            完成客户端程序（也就是浏览器端）的开发，
+                            开发JavaScript以及Flash模块，
+                            同时结合后开开发技术模拟整体效果，
+                            进行丰富互联网的Web开发，
+                            致力于通过技术改善用户体验。
+                        </p>
+                        
+                    </div>
+                </div>
+                
+                <div class="part">
+                    <div class="side">
+                        <p>
+                            <span style="font-size: medium;font-weight: bold;">
+                                XX信息公司
+                            </span><br/>
+                            <span style="font-size: smaller;">
+                                Web前端开发工程师、<br/>Web前端设计师<br/>2011.07 - 2013.08
+                            </span>
+                        </p>
+                    </div>
+                    <div class="content">
+                        <p>
+                            开发JavaScript以及Flash模块，
+                            同时结合后开开发技术模拟整体效果，
+                            进行丰富互联网的Web开发，
+                            致力于通过技术改善用户体验。
+                        </p>
+                    </div>
+                </div>   
+            </div>
+            
+            <div class="section">
+                <h2 class="grad_yellow">
+                    <div class="circle">
+                        <div  class="icon"  style="background-position: 0px 0px;"></div>
+                    </div>
+                    个人技能
+                </h2>
+                <div class="part">
+                    <div class="side">
+                        <p><b>HTML 5</b></p>
+                    </div>
+                    <div class="content">
+                        <p>精通并熟练使用</p>
+                    </div>
+                </div>
+                
+                <div class="part">
+                    <div class="side">
+                        <p><b>CSS 3</b></p>
+                    </div>
+                    <div class="content">
+                        <p>精通并熟练使用</p>
+                    </div>
+                </div>
+                
+                <div class="part">
+                    <div class="side">
+                        <p><b>JavaScript</b></p>
+                    </div>
+                    <div class="content">
+                        <p>精通并熟练使用</p>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="section">
+                <h2 class="grad_orange">
+                    教育背景
+                    <div class="circle">
+                        <div  class="icon"  style="background-position: -45px 0px;"></div>
+                    </div>
+                </h2>
+                <div class="part">
+                    <div class="side">
+                        <p>
+                            <span style="font-size: medium;font-weight: bold;">
+                                四川大学
+                            </span><br/>
+                            <span style="font-size: smaller;">
+                                计算机科学与技术专业<br/>2007.06 - 2011.06
+                            </span>
+                    </div>
+                    <div class="content">
+                        <p>
+                            主要学习高等数学、线性代数、概率论与数理统计、
+                            离散数学、组合数学、计算机原理、人工智能、
+                            程序设计基础、面向对象程序设计、数字逻辑电路、
+                            模拟电子技术、数据结构、算法设计、WEB程序设计、
+                            计算机组成与结构、操作系统、数据库系统原理、
+                            编译原理、计算机网络、网络工程、软件工程、
+                            数据库应用、信息安全、微型计算机技术、汇编语言、
+                            单片机技术、嵌入式系统、嵌入式操作系统、
+                            嵌入式设计与应用、移动设备应用软件开发等。
+                        </p>
+                    </div>
+                </div>                
+            </div>
+
+            <div class="section">
+                <h2 class="grad_red">
+                    <div class="circle">
+                        <div  class="icon"  style="background-position: 0px -45px;"></div>
+                    </div>
+                    获得荣誉
+                </h2>
+                <div class="part">
+                    <div class="side">
+                        <p>CET-6英语六级，优秀的听说能力</p>
+                        <p>四川大学教学信息化大奖赛一等奖</p>
+                        <p>被Web前端老师极度赞赏</p>
+                    </div>     
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
